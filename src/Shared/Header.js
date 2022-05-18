@@ -15,7 +15,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/todos">Todo List</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">AddTodo</Nav.Link>
+                            <Nav.Link as={Link} to="/addTodo">AddTodo</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

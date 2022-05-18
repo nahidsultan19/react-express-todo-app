@@ -11,7 +11,7 @@ const Todos = () => {
     }, [])
     return (
         <div>
-            <h2>Todos</h2>
+
             <ul className='list-group'>
                 {todos.map(todo => <Todo key={todo._id} todo={todo}></Todo>)}
             </ul>
