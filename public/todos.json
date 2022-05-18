@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "description": "Learn HTML as beginner",
+        "completed": true
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "description": "Learn CSS as beginner",
+        "completed": true
+    },
+    {
+        "id": 3,
+        "name": "Bootstrap",
+        "description": "Learn Bootstrap as beginner",
+        "completed": true
+    },
+    {
+        "id": 4,
+        "name": "JavaScript",
+        "description": "Learn JavaScript as beginner",
+        "completed": true
+    },
+    {
+        "id": 5,
+        "name": "React",
+        "description": "Learn React as beginner",
+        "completed": true
+    },
+    {
+        "id": 6,
+        "name": "Python",
+        "description": "Learn Python as beginner",
+        "completed": true
+    },
+    {
+        "id": 7,
+        "name": "Node",
+        "description": "Learn Node as beginner",
+        "completed": false
+    },
+    {
+        "id": 6,
+        "name": "AWS",
+        "description": "Learn AWS as beginner",
+        "completed": false
+    }
+]
