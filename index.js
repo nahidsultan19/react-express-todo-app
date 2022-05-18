@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
 const app = express()
 const port = process.env.PORT || 5000;
@@ -20,6 +20,35 @@ async function run() {
         const query = {};
         const todos = await todosCollection.find(query).toArray();
         res.send(todos);
+    });
+
+    app.post('/todo', async (req, res) => {
+        const todo = req.body;
+        const result = await todosCollection.insertOne(todo)
+        res.send(result);
+    });
+
+    app.put('/todo/:id', async (req, res) => {
+        const id = req.params.id;
+        const data = req.body;
+        const filter = { _id: ObjectId(id) }
+        const options = { upsert: true }
+        const updateDoc = {
+            $set: {
+                name: data.name,
+                description: data.description,
+                completed: data.completed
+            }
+        }
+        const result = await todosCollection.updateOne(filter, updateDoc, options);
+        res.send(result);
+    })
+
+    app.delete('/todo/:id', async (req, res) => {
+        const id = req.params.id;
+        const filter = { _id: ObjectId(id) };
+        const result = await todosCollection.deleteOne(filter);
+        res.send(result);
     })
 }
 run().catch(console.dir);
