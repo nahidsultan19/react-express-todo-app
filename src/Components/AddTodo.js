@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 
+
 const AddTodo = () => {
-    const [todo, setTodo] = useState('')
     const navigate = useNavigate()
+
 
     const handleSubmit = event => {
         event.preventDefault()
